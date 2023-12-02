@@ -41,9 +41,9 @@
   <xs:element name="elem" type="xs:string"/>
   <xs:element name="row">
     <xs:complexType>
-      <xs:choice maxOccurs="unbounded" minOccurs="0">
-        <xs:element ref="col"/>
-      </xs:choice>
+      <xs:sequence>
+        <xs:element ref="col" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
       <xs:attribute type="xs:string" name="type" use="optional"/>
     </xs:complexType>
   </xs:element>
@@ -52,6 +52,15 @@
       <xs:sequence>
         <xs:element ref="row" maxOccurs="unbounded" minOccurs="0"/>
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="source" use="optional"/>
+        </xs:extension>
+      </xs:simpleContent>
     </xs:complexType>
   </xs:element>
   <xs:element name="naglowek">
@@ -87,6 +96,15 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="trasy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tytul"/>
+        <xs:element ref="tresc"/>
+        <xs:element ref="image" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="root">
     <xs:complexType>
       <xs:sequence>
@@ -94,6 +112,7 @@
         <xs:element ref="menu"/>
         <xs:element ref="glowna"/>
         <xs:element ref="wybor"/>
+        <xs:element ref="trasy"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
