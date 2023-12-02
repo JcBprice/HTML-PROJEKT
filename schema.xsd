@@ -1,58 +1,99 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="logo" type="xs:string"/>
+  <xs:element name="web-title" type="xs:string"/>
+  <xs:element name="web-subtitle" type="xs:string"/>
+  <xs:element name="item" type="xs:string"/>
+  <xs:element name="bold" type="xs:string"/>
+  <xs:element name="tytul" type="xs:string"/>
+  <xs:element name="tresc">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="bold"/>
+        <xs:element ref="lista" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="typ" type="xs:string"/>
+  <xs:element name="opis" type="xs:string"/>
+  <xs:element name="rower">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="typ"/>
+        <xs:element ref="opis"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rower" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="col">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="elem" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="elem" type="xs:string"/>
+  <xs:element name="row">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element ref="col"/>
+      </xs:choice>
+      <xs:attribute type="xs:string" name="type" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tabela">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="row" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="naglowek">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="logo"/>
+        <xs:element ref="web-title"/>
+        <xs:element ref="web-subtitle"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="menu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="item" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="glowna">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tytul"/>
+        <xs:element ref="tresc"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wybor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tytul"/>
+        <xs:element ref="tresc"/>
+        <xs:element ref="tabela"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="root">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="naglowek">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element type="xs:string" name="logo"/>
-              <xs:element type="xs:string" name="web-title"/>
-              <xs:element type="xs:string" name="web-subtitle"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="menu">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element type="xs:string" name="item" maxOccurs="unbounded" minOccurs="0"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="glowna">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element type="xs:string" name="tytul"/>
-              <xs:element type="xs:string" name="tresc"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="wybor">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="tabela">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="rower" maxOccurs="unbounded" minOccurs="0">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element type="xs:string" name="opis"/>
-                          <xs:element name="czego-szukac">
-                            <xs:complexType>
-                              <xs:sequence>
-                                <xs:element type="xs:string" name="content" maxOccurs="unbounded" minOccurs="0"/>
-                              </xs:sequence>
-                            </xs:complexType>
-                          </xs:element>
-                        </xs:sequence>
-                        <xs:attribute type="xs:string" name="rodzaj" use="optional"/>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
+        <xs:element ref="naglowek"/>
+        <xs:element ref="menu"/>
+        <xs:element ref="glowna"/>
+        <xs:element ref="wybor"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
