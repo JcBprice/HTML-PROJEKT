@@ -12,10 +12,11 @@
             <item>Wybór roweru</item>
             <item>Trasy TPK</item>
         </menu>
+
         <glowna>
             <tytul>Wstęp</tytul>
             <tresc>
-                <bold>Witaj na Stronie Głównej Pasjonatów Rowerów i TTPK!</bold>
+                Witaj na Stronie Głównej Pasjonatów Rowerów i TTPK!
 
                 Zanurz się w fascynującym świecie jazdy na dwóch kółkach i odkryj uroki Trójmiejskiego Parku Krajobrazowego na wyjątkowych trasach rowerowych. Jesteśmy tu, by wspólnie z Tobą stworzyć niezapomniane przygody na jednym z najpiękniejszych obszarów Polski!
                 
@@ -37,89 +38,43 @@
             </tresc>
         </glowna>
         <wybor>
-            <tytul>Wybór Typu Roweru</tytul>
-            <tresc>
-                <bold>Przewodnik po Różnych Kategoriach</bold>
-                <lista>
-                    <rower>
-                        <typ>Rower górski</typ>
-                        <opis>Rower górski to idealny wybór dla miłośników przygód na trudnym terenie. Jego solidna rama oraz duże opony z bieżnikiem pozwalają na skuteczne pokonywanie nierówności terenu. Charakterystyczne są także amortyzatory, zarówno z przodu, jak i z tyłu, które absorbują wstrząsy podczas jazdy po trudnych ścieżkach. Rower górski jest znany z trwałości i zdolności do radzenia sobie w ekstremalnych warunkach terenowych.</opis>
-                    </rower>
-                    <rower>
-                        <typ>Rower miejski</typ>
-                        <opis>Rower miejski został stworzony z myślą o wygodzie i funkcjonalności w miejskim otoczeniu. Jego charakterystyczną cechą jest prosta rama, umożliwiająca łatwe wsiadanie i zsiadanie. Nisko osadzona rama sprawia, że jest przyjazny dla użytkowników w różnym wieku. Dodatkowo, rowery miejskie często posiadają osłonę łańcucha, błotniki oraz bagażnik, co sprawia, że są praktyczne w codziennym użytkowaniu. Zazwyczaj wyposażone są w oświetlenie, a niekiedy także w kosz.</opis>
-                    </rower>
-                    <rower>
-                        <typ>Rower szosowy</typ>
-                        <opis>Rower szosowy to jedno z najszybszych i najbardziej efektywnych środków transportu na utwardzonych drogach. Jego lekka i aerodynamiczna rama, często z ukośnymi rurami, sprawia, że jest idealny do jazdy na długich trasach. Wąskie opony o niskim oporze toczenia umożliwiają utrzymanie wysokiej prędkości. Rower szosowy jest wyposażony w wiele biegów, co pozwala na płynne dostosowanie się do różnych warunków terenowych. To popularny wybór wśród entuzjastów kolarstwa szosowego i uczestników wyścigów.</opis>
-                    </rower>
-                    <rower>
-                        <typ>Rower trekkingowy</typ>
-                        <opis>Rower trekkingowy stanowi połączenie cech roweru miejskiego i szosowego, tworząc uniwersalne narzędzie do długodystansowych tras. Posiada lekką, a zarazem wytrzymałą ramę, umożliwiającą jazdę zarówno po utwardzonych drogach, jak i leśnych ścieżkach. Charakteryzuje się szerszymi oponami niż rower szosowy, co wpływa na komfort jazdy. Rower ten jest wyposażony w wszystko, co potrzebne do długotrwałego i zróżnicowanego pedałowania.</opis>
-                    </rower>
-                </lista>
-            </tresc>
             <tabela>
-                <row type="opisy">
-                    <col name="nazwa">Rowery</col>
-                    <col name="nazwa">Opisy</col>
-                    <col name="nazwa">Czego szukać</col>
-                </row>
-                <row type="rower">
-                    <col name="typ">Rower Górski</col>
-                    <col name="opis">Rower przeznaczony do jazdy w terenie górskim, idealny dla miłośników przygód na szlakach terenowych.</col>
-                    <col name="czego-szukac">
-                        <elem>Pełne zawieszenie vs. hardtail</elem>
-                        <elem>Rodzaj hamulców (tarczowe, v-brake)</elem>
-                        <elem>Grubość opony i rodzaj bieżnika</elem>
-                        <elem>Materiał ramy (aluminiowa, karbonowa)</elem>
-                    </col>
-                </row>
-                <row type="rower">
-                    <col name="typ">Rower Miejski</col>
-                    <col name="opis">Rower dedykowany do codziennego transportu w miejskim otoczeniu, zapewniający wygodę i funkcjonalność.</col>
-                    <col name="czego-szukac">
-                        <elem>Geometria ramy zapewniająca wygodną pozycję</elem>
-                        <elem>Funkcje miejskie, takie jak oświetlenie LED i błotniki</elem>
-                        <elem>Liczba biegów i rodzaj przerzutek</elem>
-                        <elem>Solidne hamulce do bezpiecznych zatrzymań</elem>
-                    </col>
-                </row>
-                <row type="rower">
-                    <col name="typ">Rower Szosowy</col>
-                    <col name="opis">Rower stworzony do szybkiej jazdy po utwardzonych drogach, idealny dla entuzjastów wyścigów i rekreacyjnych tras.</col>
-                    <col name="czego-szukac">
-                        <elem>Lekka rama z aluminium lub karbonu</elem>
-                        <elem>Aero-geometria dla zwiększenia prędkości</elem>
-                        <elem>Wysokiej jakości osprzęt, takie jak przerzutki i hamulce</elem>
-                        <elem>Opony o niskim oporze toczenia</elem>
-                    </col>
-                </row>
-                <row type="rower">
-                    <col name="typ">Rower Trekkingowy</col>
-                    <col name="opis">Rower stworzony do szybkiej jazdy po utwardzonych drogach, idealny dla entuzjastów wyścigów i rekreacyjnych tras.</col>
-                    <col name="czego-szukac">
-                        <elem>Wygodna geometria ramy dla długich tras</elem>
-                        <elem>System mocowania bagażu (bagażniki, sakwy)</elem>
-                        <elem>Odpowiedni zakres przerzutek do pokonywania różnych terenów</elem>
-                        <elem>Soelemidne hamulce do bezpiecznej jazdy w różnych warunkach</elem>
-                    </col>
-                </row>
+                <rower rodzaj="gorski">
+                    <opis>Rower przeznaczony do jazdy w terenie górskim, idealny dla miłośników przygód na szlakach terenowych.</opis>
+                    <czego-szukac>
+                        <content>Pełne zawieszenie vs. hardtail</content>
+                        <content>Rodzaj hamulców (tarczowe, v-brake)</content>
+                        <content>Grubość opony i rodzaj bieżnika</content>
+                        <content>Materiał ramy (aluminiowa, karbonowa)</content>
+                    </czego-szukac>
+                </rower>
+                <rower rodzaj="miejski">
+                    <opis>Rower dedykowany do codziennego transportu w miejskim otoczeniu, zapewniający wygodę i funkcjonalność.</opis>
+                    <czego-szukac>
+                        <content>Geometria ramy zapewniająca wygodną pozycję</content>
+                        <content>Funkcje miejskie, takie jak oświetlenie LED i błotniki</content>
+                        <content>Liczba biegów i rodzaj przerzutek</content>
+                        <content>Solidne hamulce do bezpiecznych zatrzymań</content>
+                    </czego-szukac>
+                </rower>
+                <rower rodzaj="szosowy">
+                    <opis>Rower stworzony do szybkiej jazdy po utwardzonych drogach, idealny dla entuzjastów wyścigów i rekreacyjnych tras.</opis>
+                    <czego-szukac>
+                        <content>Lekka rama z aluminium lub karbonu</content>
+                        <content>Aero-geometria dla zwiększenia prędkości</content>
+                        <content>Wysokiej jakości osprzęt, takie jak przerzutki i hamulce</content>
+                        <content>Opony o niskim oporze toczenia</content>
+                    </czego-szukac>
+                </rower>
+                <rower rodzaj="trekkingowy">
+                    <opis>Rower stworzony do szybkiej jazdy po utwardzonych drogach, idealny dla entuzjastów wyścigów i rekreacyjnych tras.</opis>
+                    <czego-szukac>
+                        <content>Wygodna geometria ramy dla długich tras</content>
+                        <content>System mocowania bagażu (bagażniki, sakwy)</content>
+                        <content>Odpowiedni zakres przerzutek do pokonywania różnych terenów</content>
+                        <content>Solidne hamulce do bezpiecznej jazdy w różnych warunkach</content>
+                    </czego-szukac>
+                </rower>
             </tabela>
         </wybor>
-        <trasy>
-            <tytul>Trójmiejskie Trasy Parku Krajobrazowego</tytul>
-            <tresc>
-                <bold>O Trójmiejskim Parku Krajobrazowym</bold>
-                Trójmiejski Park Krajobrazowy to obszar o powierzchni ponad 3,5 tysiąca hektarów, rozciągający się na terenie Gdańska, Gdyni i Sopotu. Jego celem jest ochrona i zachowanie naturalnego dziedzictwa oraz stworzenie warunków do aktywnego wypoczynku mieszkańców i turystów. Park ten stanowi oazę spokoju, w której można uciec od miejskiego zgiełku i cieszyć się pięknem przyrody.
-                Zdjęcia Trójmiejskiego Parku Krajobrazowego
-                Zapraszamy do obejrzenia naszej galerii zdjęć, które oddają urok i różnorodność Trójmiejskiego Parku Krajobrazowego. Znajdziesz tutaj malownicze widoki, zielone aleje, tajemnicze lasy oraz unikatową florę i faunę. Każde zdjęcie przeniesie Cię w inny zakątek tego niezwykłego obszaru.
-            </tresc>
-            <image source="image1.png"/>
-            <image source="image2.png"/>
-            <image source="image3.png"/>
-            <image source="image4.png"/>
-            <image source="image5.png"/>
-            <image source="image6.png"/>
-        </trasy>
     </root>
